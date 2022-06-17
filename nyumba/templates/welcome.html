@@ -1,0 +1,25 @@
+{%extends 'base.html'%} {% load bootstrap5 %} {% load static%} {% block content%}
+<div class="container-fluid">
+    <div class="center">
+        <video autoplay loop muted="background">
+
+
+        <source src="https://res.cloudinary.com/dpusync50/video/upload/v1650195559/neighbourhood_i4e252.mp4"></source>
+
+
+    </video>
+    </div>
+    <div class="info">
+        <h1>The Neighbourhood</h1>
+        <h4>It's a beautiful day in the neighborhood, a beautiful day for a neighbor.<br>The whole world is one neighborhood.<br>If we wish to rebuild our cities, we must first rebuild our neighborhoods.<br>Be on the Know on whats going on aroung your neighbourhood<br>Get
+            to know and interact with your neighbour.
+        </h4>
+        <div class="signs">
+            <a href="/accounts/register"><button class="btn btn-primary hood-btn btn-lg" role="button">SignUp </button></a>
+            <a href="/accounts/login"><button class="btn btn-primary hood-btn btn-lg" role="button">LOGIN </button></a>
+
+
+        </div>
+    </div>
+</div>
+{%endblock%}
