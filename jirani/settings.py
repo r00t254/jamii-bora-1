@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -39,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'nyumba.apps.NyumbaConfig',
     'bootstrap5',
+    'tinymce',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +136,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REGISTER_REDIRECT_URL='index'
 LOGIN_REDIRECT_URL='index'
+
+cloudinary.config( 
+  cloud_name = "dhmbjiskt", 
+  api_key = "335994163622817", 
+  api_secret = "yoEvtKnCdOIAOkF7vgcTnhcY4Rk",
+  secure = True
+)
