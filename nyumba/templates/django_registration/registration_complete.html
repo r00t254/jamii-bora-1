@@ -1,22 +1,18 @@
 {%extends "django_registration/base.html"%} {% load bootstrap5 %} {% block content %}
 <div class="container">
-    <div class="alert alert-success">
-        <p>Successfully Registered
+    <div class="complete">
+        <p class=" alert alert-success">Successfully Registered
             <a href=""></a>
         </p>
-    </div>
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="container text-center">
-                <h1>YOUR JIRANI NEEDS YOU!</h1>
-                <p>But first, let us update your profile.</p>
-                <p>And get started</p>
-                <a href="#"><button>Update Profile</button></a>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="prof-body">
-    
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="text-center">
+                    <h1>YOUR NEIGHBOURHOOD NEEDS YOU!</h1>
+                    <p>But first, let us update your profile.</p>
+                    <p>And get started</p>
+                    <a href="{% url 'update_profile'%}"><button>Update Profile</button></a>
+                </div>
             </div>
         </div>
     </div>
