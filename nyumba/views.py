@@ -61,13 +61,18 @@ def neighbourhood(request,id):
     
     return render(request,'hood.html',{'hood':hood,'posts':posts,'businesses': businesses,'profiles':profiles})
 
-    
-  
-
-    
+     
 @login_required(login_url='/accounts/login/') 
 def join_neighbourhood(request, id):
     neighbourhood = get_object_or_404(NeighbourHood, id=id)
     request.user.profile.neighbourhood = neighbourhood
+    request.user.profile.save()
+    return redirect('index')
+
+
+@login_required(login_url='/accounts/login/') 
+def change_neighbourhood(request, id):
+    neighbourhood = get_object_or_404(NeighbourHood, id=id)
+    request.user.profile.neighbourhood = None
     request.user.profile.save()
     return redirect('index')

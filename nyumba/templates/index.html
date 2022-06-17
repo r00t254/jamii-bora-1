@@ -37,16 +37,17 @@
         <div class=" mt-5 available-section">
             <div class="d-flex justify-content-between">
                 <p> Available neighbourhoods:</p><br><br>
-                <p href="{%url 'createhood'%}"> <button class="btn btn-primary hood-btn">Create a Neighbourhood <i
-                        style="color: #fff" class="fas fa-home"></i></button></p>
+                <a href="{% url 'createhood' %}"><p style="margin-left: 700px;"> <button class="btn btn-primary hood-btn">Create a Neighbourhood <i
+                    style="color: #fff" class="fas fa-home"></i></button></p></a>
+                
             </div>
         </div>
         <div class="" id="target-home">
             <div class="row">
                 {% for hood in hoods %}
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="hood-list">
-                        <div class="card p-2">
+                    <div  class="hood-list">
+                        <div style="width: 500px;" class="card p-2">
                             {% if hood.image %}
                             <img class="card-img-top" src="{{ hood.image.url }}" alt="Card image cap"> {% else %}
                             <p>No Image</p>
@@ -60,7 +61,9 @@
                                     <a href="{% url 'neighbourhood' id=hood.id %}">
                                         <p style="color:#8A8635">Visit Neighbourhood</p>
                                     </a>
-                                   
+                                    <a href="{% url 'change-neighbourhood' id=hood.id %}">
+                                        <p style="color: #A3423C">Change Neighbourhood</p>
+                                    </a>
                                     {% elif not request.user.profile.neighbourhood %}
                                     <a href="{% url 'join-neighbourhood' hood.id %}">
                                         <p>Join Neighbourhood</p>
