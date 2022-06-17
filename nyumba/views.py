@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 from .models import Profile, NeighbourHood
 from django.contrib.auth.models import User
 from .forms import ProfileForm, HoodForm
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 # Create your views here.
+
 @login_required(login_url='/accounts/login/')
 def index(request):
     current_user = request.user
