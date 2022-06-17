@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Profile, NeighbourHood, Business, Post
 from django.contrib.auth.models import User
 from .forms import ProfileForm, HoodForm
@@ -58,7 +58,16 @@ def neighbourhood(request,id):
     posts = Post.objects.all().order_by('-post_date').filter(neighbourhood_id=id)
     hood = NeighbourHood.objects.get(id=id)
     
+    
     return render(request,'hood.html',{'hood':hood,'posts':posts,'businesses': businesses,'profiles':profiles})
 
     
+  
 
+    
+@login_required(login_url='/accounts/login/') 
+def join_neighbourhood(request, id):
+    neighbourhood = get_object_or_404(NeighbourHood, id=id)
+    request.user.profile.neighbourhood = neighbourhood
+    request.user.profile.save()
+    return redirect('index')

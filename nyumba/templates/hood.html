@@ -1,0 +1,24 @@
+{%extends 'base.html'%} {% load bootstrap5 %} {% load static%} {% block content%}
+<div class="container p-5 welcome-container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <img class="img-responsive my-pic" src="{{hood.image.url}}" alt="House" />
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 mt-5">
+            <h3>Welcome to {{hood.name}},{{hood.location}}</h3>
+            <p>{{hood.description}}</p>
+            <ul>
+                <li>
+                    <p>{{hood.neighbourhood_post.count}} post{{hood.neighbour_post.count|pluralize}}</p>
+                </li>
+                <li>
+                    <p>{{hood.neighbour.count}} neighbour{{hood.neighbour.count|pluralize}}</p>
+                </li>
+                <li>
+                    <p>{{hood.business.count}} business{{hood.business.count|pluralize}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
