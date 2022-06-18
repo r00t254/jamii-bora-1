@@ -72,6 +72,37 @@
             </div>
         </div>
         {% endfor %}
+
+        
+        <div class="row p-4 mt-4">
+            {% for business in businesses %}
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="HOOD">
+                    <div class="card mb-2">
+                        {% if business.image %}
+                        <img class="card-img-top" src="{{business.image.url}}" alt="Card image cap"> {% else %}
+                        <p>No Image</p>
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-text">{{business.name}}</h5>
+                            <p><strong>Owner</strong>: {{business.user}}</p>
+                            <p>BUSINESS CONTACTS:</p>
+                            <p><i class="fas fa-phone me-2"></i> +254{{business.phone_number}}</p>
+                            <p><i class="far fa-envelope me-2"></i> {{business.email}}</p>
+                            <p class="ms-auto">Created {{business.post_date|timesince}} ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <p>{{business.name}}</p>
+        <p>{{business.email}}</p>
+
+
+
+
     </div>
 </div>
 
