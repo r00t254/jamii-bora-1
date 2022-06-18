@@ -20,7 +20,7 @@
                 <a class="sidebar-link" href="{% url 'createhood'%}">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                  <path d="M11.23 7.29V3.283c0-.427.34-.782.77-.782.385 0 .711.298.763.677l.007.104v4.01h4.78c2.38 0 4.335 1.949 4.445 4.38l.005.215v5.04c0 2.447-1.887 4.456-4.232 4.569l-.208.005H6.44c-2.38 0-4.326-1.94-4.435-4.379L2 16.905v-5.03c0-2.447 1.878-4.466 4.222-4.58l.208-.004h4.8v6.402l-1.6-1.652a.755.755 0 00-1.09 0 .81.81 0 00-.22.568c0 .157.045.32.14.459l.08.099 2.91 3.015c.14.155.34.237.55.237a.735.735 0 00.465-.166l.075-.071 2.91-3.015c.3-.31.3-.816 0-1.126a.755.755 0 00-1.004-.077l-.086.077-1.59 1.652V7.291h-1.54z" />
-                </svg> Create Hood
+                </svg> Create Community
                 </a>
                 <a class="sidebar-link" href="{% url 'logout' %}">
                     <svg viewBox="0 0 24 24" fill="currentColor">
@@ -36,7 +36,7 @@
     <div class="hood">
         <div class=" mt-5 available-section">
             <div class="d-flex justify-content-between">
-                <p> Available neighbourhoods:</p><br><br>
+                <p> Available Communities:</p><br><br>
                 <a href="{% url 'createhood' %}"><p style="margin-left: 700px;"> <button class="btn btn-primary hood-btn">Create Community <i
                     style="color: #fff" class="fas fa-home"></i></button></p></a>
                 
@@ -53,20 +53,20 @@
                             <p>No Image</p>
                             {% endif %}
                             <div class="card-body">
-                                <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> {{hood.name}}, {{hood.location}}</h5>
+                                <h5 style="color: #54447B;" class="card-title"><i class="fas fa-map-marker-alt"></i> {{hood.name}}, {{hood.location}}</h5>
                                 <p class="card-text">{{hood.description}}</p>
                                 <p class="text-muted">{{hood.neighbour.count}} <i class="fas mx-1 fa-users"></i></p>
                                 <div class="d-flex justify-content-around">
                                     {% if request.user.profile.neighbourhood == hood %}
-                                    <a href="{% url 'neighbourhood' id=hood.id %}">
-                                        <p style="color:#8A8635">Visit Neighbourhood</p>
+                                    <a style="text-decoration: none;" href="{% url 'neighbourhood' id=hood.id %}">
+                                        <p style="color:#3F3F3F">Visit Community</p>
                                     </a>
-                                    <a href="{% url 'change-neighbourhood' id=hood.id %}">
-                                        <p style="color: #A3423C">Change Neighbourhood</p>
+                                    <a style="text-decoration: none;" href="{% url 'change-neighbourhood' id=hood.id %}">
+                                        <p style="color: #903749">Change Community  </p>
                                     </a>
                                     {% elif not request.user.profile.neighbourhood %}
-                                    <a href="{% url 'join-neighbourhood' hood.id %}">
-                                        <p>Join Neighbourhood</p>
+                                    <a style="text-decoration: none;"  href="{% url 'join-neighbourhood' hood.id %}">
+                                        <p style="color: #323232;">Join Community</p>
                                     </a>
                                     {% endif %}
                                 </div>

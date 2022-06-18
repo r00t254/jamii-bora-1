@@ -8,7 +8,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="prof-body mt-5">
-                <form style="color: wheat;" action="{% url 'post' hood_id=hood.id %}" method="post" enctype="multipart/form-data">
+                <form style="color: #FFFFFF;" action="{% url 'post' hood_id=hood.id %}" method="post" enctype="multipart/form-data">
                     {% csrf_token%} {% bootstrap_form form %}
                     <div class="form-group text-center">
                         <input type="submit" class="m-4 btn btn-primary new-btn" value="Create Post">

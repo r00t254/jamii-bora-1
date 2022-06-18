@@ -26,11 +26,11 @@
     </div>
     <div class="row">
             <div class="prof-body">
-                <h6 style="margin-top: 10px; color: wheat;">CREATE NEW JAMII HERE</h6>
-                <form style="color: wheat;" action="{% url 'createhood'%}" method="post" enctype="multipart/form-data">
+                <h6 style="margin-top: 10px; color: #FFFFFF;">CREATE NEW COMMUNITY HERE</h6>
+                <form style="color: #FFFFFF;" action="{% url 'createhood'%}" method="post" enctype="multipart/form-data">
                     {% csrf_token%} {% bootstrap_form form %}
                     <div class="form-group text-center">
-                        <input type="submit" class="btn btn-primary hood-btn" value="Create Neighbourhood">
+                        <input type="submit" class="btn btn-primary hood-btn" value="Create Community">
                     </div>
                     <input type="hidden" name="next" value="{{next}}">
                 </form>

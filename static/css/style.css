@@ -6,7 +6,7 @@
 
 :root {
     --body-font: "Inter", sans-serif;
-    --theme-bg: #1f1d2b;
+    --theme-bg: #313552;
     --body-color: #808191;
     --button-bg: #353340;
     --border-color: rgba(128, 129, 145, 0.24);
@@ -39,7 +39,7 @@
 }
 
 .hood-btn {
-    background-color: #ff7551;
+    background-color: #94B5C0;
 }
 
 .updatee {
@@ -73,26 +73,26 @@ p {
 }
 
 h1 {
-    color: #FF7551;
+    color: #94B5C0;
 }
 
 .info h4 {
     color: white;
-    text-shadow: 2px 2px 2px #FF7551;
+    text-shadow: 2px 2px 2px #94B5C0;
     line-height: 3rem;
 }
 
 .card {
-    background-color: #ff7551;
+    background-color: #94B5C0;
     /* width: 150%; */
 }
 
 h4 {
-    color: #FF7551;
+    color: #94B5C0;
 }
 
 h3 {
-    color: #FF7551;
+    color: #94B5C0;
 }
 
 .sidebar {
@@ -148,7 +148,7 @@ h3 {
 
 .sidebar-link:hover:nth-child(2n+1) svg,
 .sidebar-link.is-active:nth-child(2n+1) svg {
-    background: #ff7551;
+    background: #94B5C0;
 }
 
 .sidebar-link:hover:nth-child(2n) svg,
