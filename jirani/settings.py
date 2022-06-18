@@ -83,26 +83,26 @@ WSGI_APPLICATION = 'jirani.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         # 'ENGINE': 'django.db.backends.sqlite3',
-#         # 'NAME': BASE_DIR / 'db.sqlite3',
-#         'ENGINE':'django.db.backends.postgresql_psycopg2',
-#         'NAME':'jirani',
-#         'USER':'wayne',
-#         'PASSWORD':'password',
-#     }
-# }
-DATABASES={
-   'default':{
-      'ENGINE':'django.db.backends.postgresql_psycopg2',
-      'NAME':'ddfecamgi8ror8',
-      'USER':'igjljrgtrgzkkl',
-      'PASSWORD':'44919d33a4b20fc952b3afeebe062454cf837f1de92b0993bd0aba99f0442d7e',
-      'HOST':'ec2-52-44-13-158.compute-1.amazonaws.com',
-      'PORT':'5432',
-   }
+DATABASES = {
+    'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME':'jirani',
+        'USER':'wayne',
+        'PASSWORD':'password',
+    }
 }
+# DATABASES={
+#    'default':{
+#       'ENGINE':'django.db.backends.postgresql_psycopg2',
+#       'NAME':'ddfecamgi8ror8',
+#       'USER':'igjljrgtrgzkkl',
+#       'PASSWORD':'44919d33a4b20fc952b3afeebe062454cf837f1de92b0993bd0aba99f0442d7e',
+#       'HOST':'ec2-52-44-13-158.compute-1.amazonaws.com',
+#       'PORT':'5432',
+#    }
+# }
 
 
 # Password validation
