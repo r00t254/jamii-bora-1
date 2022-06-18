@@ -96,7 +96,7 @@ def createbusiness(request, id):
             return redirect ('neighbourhood', id=hood.id)
         else:
             form = BusinessForm()
-    return render(request,'create-business.html',{'hood':hood, 'form':form})
+    return render(request,'business.html',{'hood':hood, 'form':form})
 
 @login_required(login_url='/accounts/login/')
 def post(request, hood_id):
