@@ -29,7 +29,31 @@
 
             </div>
         </div>
-       
+
+        <div class="side-wrapper">
+
+            {% if request.user.profile.neighbourhood == hood %}
+            <h5>Hoods</h5>
+            <div class="side-menu">
+                <div class="HOOD">
+
+
+                    <a href="{% url 'post' hood_id=hood.id %}"> <button class="btn btn-primary mt-4 hood-btn">Create a Post <i
+                                    style="color: #fff" class="far ms-2 fa-newspaper"></i></button></a>
+
+                </div>
+            </div>
+
+           
+            <div class="HOOD">
+
+                <a href="{% url 'create-business' id=hood.id %}"> <button class="btn btn-primary mt-4 hood-btn">Create a Business
+                            <i style="color: #fff" class="fas ms-2 fa-briefcase"></i></button></a>
+            </div>
+
+
+            {%endif%}
+        </div>
     </div>
 
 
