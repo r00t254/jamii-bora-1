@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 import cloudinary
 import cloudinary.uploader
@@ -30,7 +31,7 @@ SECRET_KEY = 'django-insecure-p)vrc5%qw5(wode%hkj@d_r6czlb(+#3a&+t=@=x@k*0w6#asz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'still-hollows-34396.herokuapp.com']
 
 
 # Application definition
@@ -82,15 +83,25 @@ WSGI_APPLICATION = 'jirani.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME':'jirani',
-        'USER':'wayne',
-        'PASSWORD':'password',
-    }
+# DATABASES = {
+#     'default': {
+#         # 'ENGINE': 'django.db.backends.sqlite3',
+#         # 'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE':'django.db.backends.postgresql_psycopg2',
+#         'NAME':'jirani',
+#         'USER':'wayne',
+#         'PASSWORD':'password',
+#     }
+# }
+DATABASES={
+   'default':{
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
+      'NAME':'ddfecamgi8ror8',
+      'USER':'igjljrgtrgzkkl',
+      'PASSWORD':'44919d33a4b20fc952b3afeebe062454cf837f1de92b0993bd0aba99f0442d7e',
+      'HOST':'ec2-52-44-13-158.compute-1.amazonaws.com',
+      'PORT':'5432',
+   }
 }
 
 
@@ -128,15 +139,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
+
 
 REGISTER_REDIRECT_URL='index'
 LOGIN_REDIRECT_URL='index'
