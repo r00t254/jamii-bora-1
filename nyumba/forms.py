@@ -17,8 +17,8 @@ class PostForm(forms.ModelForm):
 class HoodForm(forms.ModelForm):
     class Meta:
         model = NeighbourHood
-        fields=['name','location','description','image','health_center','health_email','health_contact']         
-        
+        fields=['name','location','description','image','health_center','health_contact','health_email','authority_center','authority_contact','authority_email']         
+
 class BusinessForm(forms.ModelForm):
     class Meta:
         model = Business
