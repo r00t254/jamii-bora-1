@@ -13,7 +13,7 @@ https://still-hollows-34396.herokuapp.com/
 
 ### Screenshot
 This is the home page
-![Website](Screenshot from 2022-06-19 20-04-26.png)
+![Website](home.png)
 
 
 
