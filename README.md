@@ -14,6 +14,8 @@ https://still-hollows-34396.herokuapp.com/
 ### Screenshot
 This is the home page
 ![Website](home.png)
+![Screenshot from 2022-06-19 08-20-09](https://user-images.githubusercontent.com/100118426/174564757-1b788c2c-9f17-4ce3-a55b-e4127c0e9311.png)
+
 
 
 
